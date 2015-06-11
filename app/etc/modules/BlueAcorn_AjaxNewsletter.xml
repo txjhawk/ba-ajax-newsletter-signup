@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <BlueAcorn_AjaxNewsletter>
+            <active>true</active>
+            <codePool>local</codePool>
+        </BlueAcorn_AjaxNewsletter>
+    </modules>
+</config>
