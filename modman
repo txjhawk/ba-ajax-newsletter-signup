@@ -2,4 +2,4 @@
 app/code/local/* app/code/local
 design/frontend/base/default/layout/* design/frontend/base/default/layout/*
 etc/modules/* etc/modules/*
-js/blueacorn/* js/blueacorn/*
+js/blueacorn/ajaxnewsletter.js js/blueacorn/ajaxnewsletter.js
