@@ -1,7 +1,11 @@
-<layout>
-    <updates>
-        <ajaxnewsletter>
-            <file>ajaxnewsletter.xml</file>
-        </ajaxnewsletter>
-    </updates>
-</layout>
+<config>
+    <frontend>
+        <layout>
+            <updates>
+                <blueacorn_ajaxnewsletter>
+                    <file>ajaxnewsletter.xml</file>
+                </blueacorn_ajaxnewsletter>
+            </updates>
+        </layout>
+    </frontend>
+</config>
