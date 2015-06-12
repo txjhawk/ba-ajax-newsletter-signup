@@ -1,3 +1,0 @@
-<reference name="head">
-    <action method="addJs"><script>js/ajaxnewsletter.js</script></action>
-</reference>
