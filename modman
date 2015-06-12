@@ -1,0 +1,5 @@
+#Ajax Newsletter Module
+app/code/local/* app/code/local
+design/frontend/base/default/layout/* design/frontend/base/default/layout/*
+etc/modules/* etc/modules/*
+js/blueacorn/* js/blueacorn/*
