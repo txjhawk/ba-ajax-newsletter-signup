@@ -1,5 +1,5 @@
 #Ajax Newsletter Module
 app/code/local/* app/code/local
 app/design/frontend/base/default/layout/ajaxnewsletter.xml app/design/frontend/base/default/layout/ajaxnewsletter.xml
-etc/modules/BlueAcorn_AjaxNewsletter.xml etc/modules/BlueAcorn_AjaxNewsletter.xml
+app/etc/modules/BlueAcorn_AjaxNewsletter.xml app/etc/modules/BlueAcorn_AjaxNewsletter.xml
 js/blueacorn/ajaxnewsletter.js js/blueacorn/ajaxnewsletter.js
