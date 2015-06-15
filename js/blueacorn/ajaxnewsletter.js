@@ -1,4 +1,13 @@
-alert("It works! The dream is alive!");
+VarienForm.prototype.submit = VarienForm.prototype.submit.wrap
+(
+    function(){
+        console.log("That's a wrap!");
+        return false;
+    }
+);
+
+
+
 
 function subscribeToNewsletter(){
     new Ajax.Request('../test.html', {
