@@ -1,0 +1,5 @@
+<!-- File: app/design/frontend/pulsestorm/default/etc/theme.xml -->
+<?xml version="1.0"?>
+<theme>
+    <parent>rwd/enterprise</parent>
+</theme>
