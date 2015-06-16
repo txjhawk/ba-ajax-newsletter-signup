@@ -5,6 +5,11 @@
 Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
 (
     function(callOriginal,ev) {
+
+        // The AJAX validation should only be done for the Newsletter Subscribe form
+        if (this.form.id != 'newsletter-validate-detail')
+            return callOriginal(ev);
+
         if (!this.validate())
         {
             // Continue executing the original function (and pass back the event itself) so the user will be notified of the validation error
