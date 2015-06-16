@@ -15,8 +15,6 @@
                 </args>
             </ajaxnewsletter>
         </routers>
-
-
         <layout>
             <updates>
                 <blueacorn_ajaxnewsletter>

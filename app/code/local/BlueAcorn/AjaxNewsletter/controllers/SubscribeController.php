@@ -15,7 +15,7 @@ class BlueAcorn_AjaxNewsletter_SubscribeController extends Mage_Core_Controller_
         {
             $newsletter = Mage::getModel('newsletter/subscriber');
 
-            if ($newsletter->loadByEmail($email)->getId())
+            if ($newsletter->loadByEmail($email)->getId())  // Check if email is already in the subscriber table
             {
                 $message = "The email '{$email}' is already subscribed to our newsletter.";
             }
@@ -23,7 +23,7 @@ class BlueAcorn_AjaxNewsletter_SubscribeController extends Mage_Core_Controller_
             {
                 try {
                     $newsletter->subscribe($email);
-                    $message = "The email '{$email}' has been subscribed to our newsletter.";
+                    $message = "Thank you for subscribing.";
                 } catch (Exception $e){
                     $message = $e->getMessage();
                 }

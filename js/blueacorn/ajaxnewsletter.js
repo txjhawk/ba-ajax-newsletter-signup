@@ -6,9 +6,7 @@ Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
 (
     function(callOriginal,ev) {
 
-        //return callOriginal(ev); // Used to override Ajax call and process request normally
-
-        console.log('Executing Ajax call...');
+        //return callOriginal(ev); // Used to override Ajax call and process request normally (for testing)
 
         // The AJAX validation should only be done for the Newsletter Subscribe form. Otherwise, continue normal execution.
         if (this.form.id != 'newsletter-validate-detail')
@@ -16,7 +14,6 @@ Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
 
         if (!this.validate())
         {
-            console.log('Invalid email');
             // Continue executing the original function (and pass back the event itself) so the user will be notified of the validation error
             return callOriginal(ev);
         }
@@ -28,13 +25,12 @@ Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
             // Get the email address being submitted for inclusion in the Ajax call
             var email_addr = this.form[0].value;
 
+            // Set URL to call for Ajax request. The email will be sent, and the status message returned.
             var actionUrl = window.location.href + 'ajaxnewsletter/subscribe/subscribe';
 
-            // this.form.action = page that is originally called from standard form submission
-            // ((ROOT)/app/code/core/Mage/Newsletter/controllers/SubscriberController.php)
             new Ajax.Request(actionUrl, {
                 method:     'GET',
-                parameters: {email: email_addr, method: 'ajax'},
+                parameters: {email: email_addr},
                 onSuccess:  function(transport) {
 
                     alert(transport.responseText);
