@@ -1,10 +1,14 @@
-// this: VarienForm('newsletter-validate-detail')
-// callOriginal: Original function Validation.prototype.onSubmit
-// ev: form submission event
+//this:         VarienForm('newsletter-validate-detail')
+//callOriginal: Original function Validation.prototype.onSubmit
+//ev:           The form submission event
 
 Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
 (
     function(callOriginal,ev) {
+
+        //return callOriginal(ev); // Used to override Ajax call and process request normally
+
+        console.log('Executing Ajax call...');
 
         // The AJAX validation should only be done for the Newsletter Subscribe form. Otherwise, continue normal execution.
         if (this.form.id != 'newsletter-validate-detail')
@@ -12,6 +16,7 @@ Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
 
         if (!this.validate())
         {
+            console.log('Invalid email');
             // Continue executing the original function (and pass back the event itself) so the user will be notified of the validation error
             return callOriginal(ev);
         }
@@ -26,20 +31,14 @@ Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
             // this.form.action = page that is originally called from standard form submission
             // ((ROOT)/app/code/core/Mage/Newsletter/controllers/SubscriberController.php)
             new Ajax.Request(this.form.action, {
-                method:     'GET',
-                parameters: {addr: email_addr},
+                method:     'POST',
+                parameters: {email: email_addr, method: 'ajax'},
                 onSuccess:  function(transport) {
-                                                    var request_status = transport.status;
 
-                                                    if (transport.status === 200) // Request was processed successfully
-                                                    {
-                                                        alert("The email was successfully added to the list.");
-                                                    }
-                                                    else
-                                                    {
-                                                        alert("There was an error processing your request.");
-                                                    }
-                                                }
+                    console.log(transport);
+
+                    var request_status = transport.status;
+                }
             });
         }
     }
