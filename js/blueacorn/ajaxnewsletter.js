@@ -23,7 +23,7 @@ Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
                 onSuccess: function(transport) {
                     var request_status = transport.status;
                     console.log(transport.status);
-                    if (status === 200)
+                    if (transport.status === 200) // Request was processed successfully
                     {
                         alert("The email was successfully added to the list.");
                     }
