@@ -28,14 +28,16 @@ Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
             // Get the email address being submitted for inclusion in the Ajax call
             var email_addr = this.form[0].value;
 
+            var actionUrl = window.location.href + 'ajaxnewsletter/subscribe/subscribe';
+
             // this.form.action = page that is originally called from standard form submission
             // ((ROOT)/app/code/core/Mage/Newsletter/controllers/SubscriberController.php)
-            new Ajax.Request(this.form.action, {
-                method:     'POST',
+            new Ajax.Request(actionUrl, {
+                method:     'GET',
                 parameters: {email: email_addr, method: 'ajax'},
                 onSuccess:  function(transport) {
 
-                    console.log(transport);
+                    alert(transport.responseText);
 
                     var request_status = transport.status;
                 }
