@@ -1,5 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <config>
+    <modules>
+        <blueacorn_ajaxnewsletter>
+            <version>0.0.1</version>
+        </blueacorn_ajaxnewsletter>
+    </modules>
     <frontend>
+        <routers>
+            <ajaxnewsletter>
+                <use>standard</use>
+                <args>
+                    <module>BlueAcorn_AjaxNewsletter</module>
+                    <frontName>ajaxnewsletter</frontName>
+                </args>
+            </ajaxnewsletter>
+        </routers>
+
+
         <layout>
             <updates>
                 <blueacorn_ajaxnewsletter>
