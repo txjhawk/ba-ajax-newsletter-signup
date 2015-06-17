@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
     <modules>
-        <blueacorn_ajaxnewsletter>
+        <BlueAcorn_AjaxNewsletter>
             <version>0.0.1</version>
-        </blueacorn_ajaxnewsletter>
+        </BlueAcorn_AjaxNewsletter>
     </modules>
     <frontend>
-        <routers>
+        <routers>   <!-- Set the controller for the module -->
             <ajaxnewsletter>
                 <use>standard</use>
                 <args>
@@ -16,9 +16,9 @@
             </ajaxnewsletter>
         </routers>
         <layout>
-            <updates>
+            <updates> <!-- Specify layout XML for module -->
                 <blueacorn_ajaxnewsletter>
-                    <file>ajaxnewsletter.xml</file>
+                    <file>blueacorn/ajaxnewsletter.xml</file>
                 </blueacorn_ajaxnewsletter>
             </updates>
         </layout>
