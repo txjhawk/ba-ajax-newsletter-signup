@@ -26,7 +26,7 @@ Validation.prototype.onSubmit = Validation.prototype.onSubmit.wrap
             var email_addr = this.form[0].value;
 
             // Set URL to call for Ajax request. The email will be sent, and the status message returned.
-            var actionUrl = window.location.href + 'ajaxnewsletter/subscribe/subscribe';
+            var actionUrl = baseurl + 'ajaxnewsletter/subscribe/subscribe';
 
             new Ajax.Request(actionUrl, {
                 method:     'GET',
