@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <sections>
+        <ajaxnews translate="label">
+            <label>Blue Acorn</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+        </ajaxnews>
+    </sections>
+</config>
