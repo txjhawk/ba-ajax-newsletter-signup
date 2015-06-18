@@ -23,4 +23,11 @@
             </updates>
         </layout>
     </frontend>
+    <default>
+        <ajaxnews>
+            <sample>
+                <enabled>1</enabled>
+            </sample>
+        </ajaxnews>
+    </default>
 </config>

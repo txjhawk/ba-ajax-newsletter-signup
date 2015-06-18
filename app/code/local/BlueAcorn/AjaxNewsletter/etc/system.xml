@@ -2,8 +2,8 @@
 <config>
     <sections>
         <ajaxnews translate="label">
-            <label>Blue Acorn</label>
-            <tab>general</tab>
+            <label>Ajax Newsletter Signup</label>
+            <tab>Blue Acorn</tab>
             <frontend_type>text</frontend_type>
             <sort_order>1000</sort_order>
             <show_in_default>1</show_in_default>
@@ -11,7 +11,7 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <sample translate="label">
-                    <label>An Example Group</label>
+                    <label>Ajax Newsletter Submission</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1000</sort_order>
                     <show_in_default>1</show_in_default>
@@ -20,9 +20,6 @@
                     <fields>
                         <enabled translate="label comment">
                             <label>Enabled</label>
-                            <comment>
-                                <![CDATA[Glah Glahhhh]]]>
-                            </comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_yesno</source_model>
                             <sort_order>10</sort_order>
