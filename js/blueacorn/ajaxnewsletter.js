@@ -12,14 +12,14 @@ document.observe("dom:loaded", function()
 
             var email_addr = this_form.form[0].value;
 
-            var http = location.protocol;
-            var slashes = http.concat("//");
-            var actionUrl = slashes.concat(window.location.hostname) +  '/index.php/ajaxnewsletter/subscribe/subscribe';
+            var http        = location.protocol;
+            var slashes     = http.concat("//");
+            var actionUrl   = slashes.concat(window.location.hostname) +  '/index.php/ajaxnewsletter/subscribe/subscribe';
 
             new Ajax.Request(actionUrl, {
-                method: 'GET',
+                method:     'GET',
                 parameters: {email: email_addr},
-                onSuccess: function (transport) {
+                onSuccess:  function (transport) {
 
                     alert(transport.responseText);
                 }
