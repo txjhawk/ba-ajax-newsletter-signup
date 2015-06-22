@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <config>
     <tabs>
-        <blue_acorn translate="label" module="ajaxnewsletter">
+        <blueacorn translate="label" module="ajaxnewsletter">
             <label>Blue Acorn</label>
             <sort_order>102</sort_order>
-        </blue_acorn>
+        </blueacorn>
     </tabs>
     <sections>
-        <ajaxnews translate="label">
+        <ajaxnews_options translate="label" module="ajaxnewsletter">
             <label>Ajax Newsletter Signup</label>
-            <tab>Blue Acorn</tab>
+            <tab>blueacorn</tab> <!-- Defined within the <tabs> section -->
             <frontend_type>text</frontend_type>
             <sort_order>1000</sort_order>
             <show_in_default>1</show_in_default>
@@ -36,6 +36,6 @@
                     </fields>
                 </sample>
             </groups>
-        </ajaxnews>
+        </ajaxnews_options>
     </sections>
 </config>
