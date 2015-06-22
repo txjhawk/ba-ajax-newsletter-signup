@@ -1,5 +1,11 @@
 <?xml version="1.0"?>
 <config>
+    <tabs>
+        <blue_acorn translate="label" module="ajaxnewsletter">
+            <label>Blue Acorn</label>
+            <sort_order>102</sort_order>
+        </blue_acorn>
+    </tabs>
     <sections>
         <ajaxnews translate="label">
             <label>Ajax Newsletter Signup</label>
