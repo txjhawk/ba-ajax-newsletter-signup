@@ -9,10 +9,21 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
 
     public function enableDisableAjaxNewsletter(Varien_Event_Observer $observer)
     {
-        $enabled = Mage::getStoreConfig('ajaxnewsoptions/ajaxsubmit/enabled');
+        $moduleName = 'BlueAcorn_AjaxNewsletter';
 
-        if ($enabled == true ) echo "Module is enabled";
+        echo Mage::helper('core/data')->isModuleEnabled($moduleName) ? 'true' : 'false';
 
         die();
+    }
+
+    protected function _disableModule($moduleName)
+    {
+        // Disable the module itself
+        $nodePath = "modules/$moduleName/active";
+
+        if (Mage::helper('core/data')->isModuleEnabled($moduleName))
+        {
+            Mage::getConfig()->setNode($nodePath, 'false', true);
+        }
     }
 }
