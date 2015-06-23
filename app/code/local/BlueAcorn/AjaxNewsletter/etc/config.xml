@@ -33,14 +33,14 @@
             </ajaxnewsletter>
         </models>
         <events>
-            <admin_system_config_changed_ajaxnewsoptions>
+            <admin_system_config_changed_section_mysection>
                 <observers>
                     <ajaxnewsletter>
                         <class>blueacorn_ajaxnewsletter/observer</class>
                         <method>enableDisableAjaxNewsletter</method>
                     </ajaxnewsletter>
                 </observers>
-            </admin_system_config_changed_ajaxnewsoptions>
+            </admin_system_config_changed_section_mysection>
 
         </events>
     </global>
