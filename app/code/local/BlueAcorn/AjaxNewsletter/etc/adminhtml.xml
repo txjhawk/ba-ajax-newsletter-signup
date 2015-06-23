@@ -11,10 +11,10 @@
                         <children>
                             <config>
                                 <children>
-                                    <ajaxnews_options translate="title">
+                                    <ajaxnewsoptions translate="title">
                                         <title>Ajax Newsletter Signup Section</title>
                                         <sort_order>100</sort_order>
-                                    </ajaxnews_options>
+                                    </ajaxnewsoptions>
                                 </children>
                             </config>
                         </children>
