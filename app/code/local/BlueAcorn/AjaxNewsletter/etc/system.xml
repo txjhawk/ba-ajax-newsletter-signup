@@ -7,7 +7,7 @@
         </blueacorn>
     </tabs>
     <sections>
-        <ajaxnews_options translate="label" module="ajaxnewsletter">
+        <ajaxnewsoptions translate="label" module="ajaxnewsletter">
             <label>Ajax Newsletter Signup</label>
             <tab>blueacorn</tab> <!-- Defined within the <tabs> section -->
             <frontend_type>text</frontend_type>
@@ -36,6 +36,6 @@
                     </fields>
                 </ajaxsubmit>
             </groups>
-        </ajaxnews_options>
+        </ajaxnewsoptions>
     </sections>
 </config>
