@@ -2,7 +2,7 @@
 
 class BlueAcorn_AjaxNewsletter_Model_Observer
 {
-    pubic function __construct()
+    public function __construct()
     {
 
     }

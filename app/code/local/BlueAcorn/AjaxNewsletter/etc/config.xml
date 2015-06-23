@@ -36,7 +36,8 @@
             <admin_system_config_changed_section_mysection>
                 <observers>
                     <ajaxnewsletter>
-                        <class>blueacorn_ajaxnewsletter/observer</class>
+                        <type>singleton</type>
+                        <class>ajaxnewsletter/observer</class>
                         <method>enableDisableAjaxNewsletter</method>
                     </ajaxnewsletter>
                 </observers>
