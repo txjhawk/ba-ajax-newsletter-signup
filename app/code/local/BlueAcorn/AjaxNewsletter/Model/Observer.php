@@ -11,6 +11,6 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
     {
         echo "Value is " . Mage::getStoreConfig('ajaxnewsoptions/ajaxsubmit/enabled');
 
-
+        die();
     }
 }
