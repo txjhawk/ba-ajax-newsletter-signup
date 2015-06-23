@@ -32,8 +32,10 @@
                 <class>BlueAcorn_AjaxNewsletter_Model</class>
             </ajaxnewsletter>
         </models>
+    </global>
+    <adminhtml>
         <events>
-            <admin_system_config_changed_section_mysection>
+            <admin_system_config_changed_section_ajaxnewsoptions>
                 <observers>
                     <ajaxnewsletter>
                         <type>singleton</type>
@@ -41,10 +43,9 @@
                         <method>enableDisableAjaxNewsletter</method>
                     </ajaxnewsletter>
                 </observers>
-            </admin_system_config_changed_section_mysection>
-
+            </admin_system_config_changed_section_ajaxnewsoptions>
         </events>
-    </global>
+    </adminhtml>
     <frontend>
         <routers>   <!-- Set the controller for the module -->
             <ajaxnewsletter>

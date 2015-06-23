@@ -11,7 +11,7 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
     {
         $event = $observer->getEvent();
 
-        die('observed');
+        die($event);
 
 
     }
