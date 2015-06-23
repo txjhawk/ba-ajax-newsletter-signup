@@ -22,5 +22,6 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
 
         Mage::getConfig()->setNode($nodePath, $is_active, true);
         echo Mage::app()->getStore()->getConfig($outputPath);
+        die();
     }
 }
