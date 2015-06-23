@@ -9,9 +9,9 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
 
     public function enableDisableAjaxNewsletter(Varien_Event_Observer $observer)
     {
-        $event = $observer->getEvent();
+        $data = $observer->getData();
 
-        die($event);
+        die($data);
 
 
     }
