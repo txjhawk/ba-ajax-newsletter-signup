@@ -9,9 +9,7 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
 
     public function enableDisableAjaxNewsletter(Varien_Event_Observer $observer)
     {
-        $data = $observer->getData();
-        var_dump($observer);
-        die();
+        echo "Value is " . Mage::getStoreConfig('ajaxnewsoptions/ajaxsubmit/enabled');
 
 
     }
