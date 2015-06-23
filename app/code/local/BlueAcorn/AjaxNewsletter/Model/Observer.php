@@ -10,6 +10,7 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
     public function enableDisableAjaxNewsletter(Varien_Event_Observer $observer)
     {
         $moduleName = 'BlueAcorn_AjaxNewsletter';
+        $nodePath   = 'modules/$moduleName/active';
 
         $is_active = Mage::helper('core/data')->isModuleEnabled($moduleName) ? 'true' : 'false';
         Mage::getConfig()->setNode($nodePath, $is_active, true);
