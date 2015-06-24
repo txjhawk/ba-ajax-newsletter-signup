@@ -2,19 +2,26 @@ var AjaxSubscribe = Class.create({
     initialize: function(url) {
         this.useurl = url;
         alert(this.useurl);
+
+        newsletterSubscriberFormDetail.form.observe('submit', function(ev) {
+
+            this.validate(ev);
+        });
     },
 
     validate: function(event) {
-        var this_form = newsletterSubscriberFormDetail;
+        var thisForm    = newsletterSubscriberFormDetail;
+        var isValid     = this_form.validator.validate();
 
-        var is_valid = this_form.validator.validate();
-
-        console.log(is_valid);
+        console.log(isValid);
 
     }
 });
 
+var as;
+
+
 document.observe("dom:loaded", function()
 {
-    var as = new AjaxSubscribe('fiddle');
+    as = new AjaxSubscribe('fiddle');
 });
