@@ -47,10 +47,10 @@
         </layout>
     </frontend>
     <default>
-        <ajaxnews>
-            <sample>
+        <ajaxnewsoptions>
+            <ajaxsubmit>
                 <enabled>1</enabled>
-            </sample>
-        </ajaxnews>
+            </ajaxsubmit>
+        </ajaxnewsoptions>
     </default>
 </config>
