@@ -1,6 +1,7 @@
 # ajax-newsletter-signup
 Code to process newsletter signup via Ajax so page reload is not needed.
 
-Theme is blueacorn/default. This allows the subscribe.phtml (subscribe form template file) to send the base url as a variable to the JS so that the controller file that checks/updates the database can be properly called.
+A new tab will be added to Admin > Configuration titled 'Blue Acorn'. 
+Within the tab is a new section 'Ajax Newsletter Signup', and a group 'Ajax Newlsetter Submission'. From this the user can enable or disable the Ajax functionality. If disabled, Magento should use the standard submission process. This is determined in the ajaxnewsletter.xml config file.
 
 Module is BlueAcorn_AjaxNewsletter.
