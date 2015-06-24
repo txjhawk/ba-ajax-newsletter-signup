@@ -1,4 +1,4 @@
-# ajax-newsletter-signup
+# ba-ajax-newsletter-signup
 Code to process newsletter signup via Ajax so page reload is not needed.
 
 A new tab will be added to Admin > Configuration titled 'Blue Acorn'. 
