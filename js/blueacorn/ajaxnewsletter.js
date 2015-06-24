@@ -6,11 +6,11 @@ var AjaxSubscribe = Class.create({
 
         newsletterSubscriberFormDetail.form.observe('submit', function(ev) {
             console.log('Button has been clicked.');
-            parent.validate();
+            parent.validate(ev);
         });
     },
 
-    validate: function(){
+    validate: function(ev){
         var thisForm    = newsletterSubscriberFormDetail;
 
         console.log(thisForm);
