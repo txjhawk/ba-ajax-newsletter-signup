@@ -6,5 +6,8 @@
                 <script>blueacorn/ajaxnewsletter.js</script>
             </action>
         </reference>
+        <reference name="before_body_end">
+            <block type="blueacorn/newsletterjs" name="ba.newsletterjs" template="blueacorn/newsletterjs.phtml" />
+        </reference>
     </default>
 </layout>
