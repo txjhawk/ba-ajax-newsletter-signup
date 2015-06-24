@@ -6,10 +6,5 @@
                 <script>blueacorn/ajaxnewsletter.js</script>
             </action>
         </reference>
-        <!--<reference name="footer.newsletter">-->
-        <!--<action method="setTemplate">-->
-        <!--<template>blueacorn/newsletter/subscribe.phtml</template>-->
-        <!--</action>-->
-        <!--</reference>-->
     </default>
 </layout>

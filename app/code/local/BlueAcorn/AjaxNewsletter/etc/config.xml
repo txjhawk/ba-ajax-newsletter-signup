@@ -21,18 +21,6 @@
             <version>0.0.1</version>
         </BlueAcorn_AjaxNewsletter>
     </modules>
-    <global>
-        <helpers>
-            <ajaxnewsletter>
-                <class>BlueAcorn_AjaxNewsletter_Helper</class>
-            </ajaxnewsletter>
-        </helpers>
-        <models>
-            <ajaxnewsletter>
-                <class>BlueAcorn_AjaxNewsletter_Model</class>
-            </ajaxnewsletter>
-        </models>
-    </global>
     <frontend>
         <routers>   <!-- Set the controller for the module -->
             <ajaxnewsletter>
