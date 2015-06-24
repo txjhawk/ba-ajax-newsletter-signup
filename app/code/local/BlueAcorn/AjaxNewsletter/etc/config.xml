@@ -35,7 +35,8 @@
     </global>
     <adminhtml>
         <events>
-            <admin_system_config_changed_section_ajaxnewsoptions>
+            <!--<admin_system_config_changed_section_ajaxnewsoptions>-->
+            <controller_action_layout_render_before>
                 <observers>
                     <ajaxnewsletter>
                         <type>singleton</type>
@@ -43,7 +44,8 @@
                         <method>enableDisableAjaxNewsletter</method>
                     </ajaxnewsletter>
                 </observers>
-            </admin_system_config_changed_section_ajaxnewsoptions>
+            </controller_action_layout_render_before>
+            <!--</admin_system_config_changed_section_ajaxnewsoptions>-->
         </events>
     </adminhtml>
     <frontend>
