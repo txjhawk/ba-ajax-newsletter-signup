@@ -10,7 +10,7 @@ var AjaxSubscribe = Class.create({
         });
     },
 
-    validate: function() {
+    validate: function(){
         var thisForm    = newsletterSubscriberFormDetail;
 
         console.log(thisForm);
@@ -24,6 +24,7 @@ var AjaxSubscribe = Class.create({
         if (is_valid) {
 
             Event.stop(ev);
+        }
 
     }
 });
