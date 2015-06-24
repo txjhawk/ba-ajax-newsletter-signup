@@ -16,7 +16,7 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
 
     protected function _toggleModule($moduleName)
     {
-        echo Mage::helper('core/data')->isModuleEnabled('BlueAcorn_AjaxNewsletter');
+        echo Mage::getStoreConfig('ajaxnewsoptions/ajaxsubmit/enabled') ? 'true' : 'false';
 
         // Disable the module itself
         $nodePath = "modules/$moduleName/active";
