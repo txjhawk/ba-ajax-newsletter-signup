@@ -21,7 +21,7 @@ var AjaxSubscribe = Class.create({
 
         console.log(isValid);
 
-        if (is_valid) {
+        if (isValid) {
 
             Event.stop(ev);
         }
