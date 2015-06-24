@@ -16,7 +16,8 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
 
     protected function _toggleModule($moduleName)
     {
-        $moduleStatus = Mage::getStoreConfig('ajaxnewsoptions/ajaxsubmit/enabled') ? 'true' : 'false';
+        $nodePath       = "modules/$moduleName/active";
+        $moduleStatus   = Mage::getStoreConfig('ajaxnewsoptions/ajaxsubmit/enabled') ? 'true' : 'false';
 
         // Set the module itself
         Mage::getConfig()->setNode($nodePath, $moduleStatus, true);
