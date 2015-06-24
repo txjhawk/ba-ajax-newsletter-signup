@@ -32,8 +32,6 @@
                 <class>BlueAcorn_AjaxNewsletter_Model</class>
             </ajaxnewsletter>
         </models>
-    </global>
-    <adminhtml>
         <events>
             <!--<admin_system_config_changed_section_ajaxnewsoptions>-->
             <controller_action_layout_render_before>
@@ -47,7 +45,7 @@
             </controller_action_layout_render_before>
             <!--</admin_system_config_changed_section_ajaxnewsoptions>-->
         </events>
-    </adminhtml>
+    </global>
     <frontend>
         <routers>   <!-- Set the controller for the module -->
             <ajaxnewsletter>
