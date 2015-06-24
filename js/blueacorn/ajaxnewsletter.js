@@ -4,7 +4,7 @@ var AjaxSubscribe = Class.create({
         alert(this.useurl);
 
         newsletterSubscriberFormDetail.form.observe('submit', function(ev) {
-
+            console.log('Button has been clicked.');
             this.validate(ev);
         });
     },
