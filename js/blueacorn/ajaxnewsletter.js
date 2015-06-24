@@ -17,4 +17,4 @@ var AjaxSubscribe = Class.create({
 document.observe("dom:loaded", function()
 {
     var as = new AjaxSubscribe('fiddle');
-}
+});
