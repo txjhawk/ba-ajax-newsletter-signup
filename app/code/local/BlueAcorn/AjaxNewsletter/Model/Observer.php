@@ -16,12 +16,20 @@ class BlueAcorn_AjaxNewsletter_Model_Observer
 
     protected function _toggleModule($moduleName)
     {
-        $nodePath   = "modules/$moduleName/active";
-        $outputPath = "advanced/modules_disable_output/$moduleName";
-        $is_active  = Mage::helper('core/data')->isModuleEnabled($moduleName) ? 'true' : 'false';
+        echo Mage::helper('core/data')->isModuleEnabled('BlueAcorn_AjaxNewsletter');
 
-        Mage::getConfig()->setNode($nodePath, $is_active, true);
-        echo "Output = " . $moduleName;
+        // Disable the module itself
+        $nodePath = "modules/$moduleName/active";
+        if (Mage::helper('core/data')->isModuleEnabled($moduleName))
+        {
+            Mage::getConfig()->setNode($nodePath, 'false', true);
+        }
+
+        // Disable its output as well (which was already loaded)
+        $outputPath = "advanced/modules_disable_output/$moduleName";
+        if (!Mage::getStoreConfig($outputPath)) {
+            Mage::app()->getStore()->setConfig($outputPath, true);
+        }
         die();
     }
 }
