@@ -2,10 +2,11 @@ var AjaxSubscribe = Class.create({
     initialize: function(url) {
         this.useurl = url;
         alert(this.useurl);
+        var parent = this;
 
         newsletterSubscriberFormDetail.form.observe('submit', function(ev) {
             console.log('Button has been clicked.');
-            this.validate(ev);
+            parent.validate(ev);
         });
     },
 
