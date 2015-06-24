@@ -1,11 +1,15 @@
 var AjaxSubscribe = Class.create({
-    initialize: function (url) {
+    initialize: function(url) {
         this.useurl = url;
         alert(this.useurl);
     },
 
-    validate: function () {
+    validate: function(event) {
+        var this_form = newsletterSubscriberFormDetail;
 
+        var is_valid = this_form.validator.validate();
+
+        console.log(is_valid);
 
     }
 });
