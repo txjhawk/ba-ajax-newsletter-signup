@@ -1,30 +1,43 @@
 var AjaxSubscribe = Class.create({
     initialize: function(url) {
-        this.useurl = url;
+        this.actionUrl  = url + 'ajaxnewsletter/subscribe/subscribe';
+        this.thisForm   = newsletterSubscriberFormDetail;
+        this.emailAddr  = '';
 
-        // Set this as the current class so that the observer can call the class's methods.
+        // Assign the class as a variable so that the observer can call the class's methods.
         var parent = this;
 
-        newsletterSubscriberFormDetail.form.observe('submit', function(ev) {
-            console.log('Button has been clicked.');
-            console.log(ev);
-            parent.validate(ev);
+        this.thisForm.form.observe('submit', function(ev) {
+
+            var validated = parent.validate(ev);
+
+            if (validated) {
+                Event.stop(ev);
+
+                parent.emailAddr = parent.thisForm.form[0].value;
+                parent.subscribe();
+            }
         });
     },
 
     validate: function(ev){
-        var thisForm = newsletterSubscriberFormDetail;
-        var isValid  = thisForm.validator.validate();
+        return this.thisForm.validator.validate();
+    },
 
-        if (isValid) {  // The entered email is valid
+    subscribe: function() {
+        console.log('Subscribe ' + this.emailAddr + ' using ' + this.actionUrl);
 
-            // Stop the form from calling the php file that processes the email so that the ajax request can handle it
-            Event.stop(ev);
+        new Ajax.Request(this.actionUrl, {
+            method:     'GET',
+            parameters: {email: this.emailAddr},
+            onSuccess:  function (transport) {
 
-            var email_addr = thisForm.form[0].value;
-        }
+                alert(transport.responseText);
+                console.log(document.cookie);
+            }
+        });
     }
 });
 
-// Create the variable as which will be set as an instance of the AjaxSubscribe class
-var as;
+// Create the variable 'ajaxsubscribe' which will be set as an instance of the AjaxSubscribe class
+var ajaxsubscribe;

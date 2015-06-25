@@ -1,8 +1,14 @@
-<?php $url = Mage::getBaseUrl(); ?>
+<?php
+if (Mage::getStoreConfig('ajaxnewsoptions/ajaxsubmit/enabled')):
 
-<script>
-    document.observe("dom:loaded", function()
-    {
-        as = new AjaxSubscribe('<?php echo $url; ?>');
-    });
-</script>
+    $url = Mage::getBaseUrl();
+    ?>
+
+    <script>
+        document.observe("dom:loaded", function()
+        {
+            ajaxsubscribe = new AjaxSubscribe('<?php echo $url; ?>');
+        });
+    </script>
+
+<?php endif; ?>
