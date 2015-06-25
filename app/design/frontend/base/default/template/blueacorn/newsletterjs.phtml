@@ -3,8 +3,13 @@
 $url = Mage::getBaseUrl();
 
 ?>
-<h1><<?php echo $url; ?></h1>
+
 <script>
 
+
+    document.observe("dom:loaded", function()
+    {
+        as = new AjaxSubscribe(<?php echo $url; ?>);
+    });
 
 </script>
