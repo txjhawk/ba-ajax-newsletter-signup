@@ -1,15 +1,8 @@
-<?php
-
-$url = Mage::getBaseUrl();
-
-?>
+<?php $url = Mage::getBaseUrl(); ?>
 
 <script>
-
-
     document.observe("dom:loaded", function()
     {
         as = new AjaxSubscribe(<?php echo $url; ?>);
     });
-
 </script>
