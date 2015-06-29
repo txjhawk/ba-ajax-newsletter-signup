@@ -33,7 +33,12 @@ var AjaxSubscribe = Class.create({
             onSuccess:  function (transport) {
 
                 alert(transport.responseText);
-                console.log(document.cookie);
+
+                var messages = $$("li#ajax_message")[0];
+
+                messages.update(transport.responseText);
+
+
             }
         });
     }
