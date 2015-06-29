@@ -39,6 +39,8 @@ var AjaxSubscribe = Class.create({
     addResponse: function() {
         // Insert the returned message in the <li> tag created on page load, and use the class associated with the status (error or success)
         var message_item = $$("li#nl_message_container")[0];
+        var currentClass = message_item.classNames();
+        message_item.removeClassName(currentClass);
         message_item.addClassName(this.response.status + "-msg");
         message_item.update(this.response.message);
     }
