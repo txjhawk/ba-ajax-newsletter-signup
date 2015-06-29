@@ -32,11 +32,13 @@ var AjaxSubscribe = Class.create({
             parameters: {email: this.emailAddr},
             onSuccess:  function (transport) {
 
-                alert(transport.responseText);
+                //alert(transport.responseText);
 
-                var messages = $$("li#ajax_message")[0];
+                var message_item = $$("li#nl_message_container")[0];
 
-                messages.update(transport.responseText);
+
+                message_item.addClassName("success-msg");
+                message_item.update("<ul><li>" + transport.responseText + "</li></ul>");
 
 
             }
