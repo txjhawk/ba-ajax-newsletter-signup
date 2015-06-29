@@ -52,7 +52,7 @@ class BlueAcorn_AjaxNewsletter_SubscribeController extends Mage_Core_Controller_
         }
 
         // Encode the subscription status and message as JSON and return to the AJAX request for display
-        Mage::app()->getResponse()->setBody(json_encode(array('status' => $noticeStatus, 'message' => '<ul><li>' . $noticeMessage . '</li></ul>')));
+        Mage::app()->getResponse()->setBody(json_encode(array('status' => $noticeStatus, 'message' => $noticeMessage)));
         return;
     }
 }

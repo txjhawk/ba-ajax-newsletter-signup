@@ -42,8 +42,8 @@ var AjaxSubscribe = Class.create({
         var currentClass = message_item.classNames();
         message_item.removeClassName(currentClass);
         message_item.addClassName(this.response.status + "-msg");
-        message_item.update(this.response.message);
-        this.thisForm.reset();
+        message_item.update('<ul><li>' + this.response.message + '</li></ul>');
+
     }
 });
 
