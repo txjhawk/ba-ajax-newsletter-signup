@@ -10,6 +10,7 @@ class BlueAcorn_AjaxNewsletter_SubscribeController extends Mage_Core_Controller_
         if (!$valid_email)
         {
             $message = "The email '{$email}' is invalid. Please enter a valid email address.";
+            $status = "error";
         }
         else
         {
@@ -18,18 +19,21 @@ class BlueAcorn_AjaxNewsletter_SubscribeController extends Mage_Core_Controller_
             if ($newsletter->loadByEmail($email)->getId())  // Check if email is already in the subscriber table
             {
                 $message = "The email '{$email}' is already subscribed to our newsletter.";
+                $status = "error";
             }
             else
             {
                 try {
                     $newsletter->subscribe($email);
                     $message = "Thank you for subscribing.";
+                    $status = "success";
                 } catch (Exception $e){
                     $message = $e->getMessage();
+                    $status = "error";
                 }
             }
         }
 
-        echo $message;
+        echo json_encode(array('status' => $status, 'message' => '<ul><li>' . $message . '</li></ul>'));
     }
 }
