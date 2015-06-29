@@ -3,6 +3,7 @@ var AjaxSubscribe = Class.create({
         this.actionUrl  = url + 'ajaxnewsletter/subscribe/subscribe';
         this.thisForm   = newsletterSubscriberFormDetail;
         this.emailAddr  = '';
+        this.response   = '';
 
         // Assign the class as a variable so that the observer can call the class's methods.
         var parent = this;
@@ -13,7 +14,6 @@ var AjaxSubscribe = Class.create({
 
             if (validated) {
                 Event.stop(ev);
-
                 parent.emailAddr = parent.thisForm.form[0].value;
                 parent.subscribe();
             }
@@ -25,24 +25,22 @@ var AjaxSubscribe = Class.create({
     },
 
     subscribe: function() {
-        console.log('Subscribe ' + this.emailAddr + ' using ' + this.actionUrl);
-
+        var parent = this;
         new Ajax.Request(this.actionUrl, {
             method:     'GET',
             parameters: {email: this.emailAddr},
             onSuccess:  function (transport) {
-
-                alert(transport);
-
-                var message_item = $$("li#nl_message_container")[0];
-
-
-                //message_item.addClassName("success-msg");
-                //message_item.update("<ul><li>" + transport.responseText + "</li></ul>");
-
-
+                parent.response = JSON.parse(transport.responseText);
+                parent.addResponse();
             }
         });
+    },
+
+    addResponse: function() {
+        // Insert the returned message in the <li> tag created on page load, and use the class associated with the status (error or success)
+        var message_item = $$("li#nl_message_container")[0];
+        message_item.addClassName(this.response.status + "-msg");
+        message_item.update(this.response.message);
     }
 });
 
