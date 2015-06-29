@@ -2,5 +2,6 @@
 app/code/local/* app/code/local
 app/design/frontend/base/default/layout/blueacorn/ajaxnewsletter.xml app/design/frontend/base/default/layout/blueacorn/ajaxnewsletter.xml
 app/design/frontend/base/default/template/blueacorn/newsletterjs.phtml app/design/frontend/base/default/template/blueacorn/newsletterjs.phtml
+app/design/frontend/base/default/template/blueacorn/messageblock.phtml app/design/frontend/base/default/template/blueacorn/messageblock.phtml
 app/etc/modules/BlueAcorn_AjaxNewsletter.xml app/etc/modules/BlueAcorn_AjaxNewsletter.xml
 js/blueacorn/ajaxnewsletter.js js/blueacorn/ajaxnewsletter.js
